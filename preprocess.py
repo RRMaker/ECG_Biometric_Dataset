@@ -59,7 +59,6 @@ IMU_COLS = [
 _SEP_DECL_RE = re.compile(rb'^"sep=')
 _SHIMMER_PREFIX_RE = re.compile(r"^Shimmer_[A-Za-z0-9]+_(.+)$")
 
-# Values that indicate a Shimmer "units" row rather than data.
 _UNIT_TOKENS = {
     "ms", "s", "Hz", "V", "mV", "kPa",
     "local_flux", "Degrees Celsius", "deg/s", "g", "no_units",
@@ -84,7 +83,6 @@ def load_source_csv(path: Path) -> "pd.DataFrame":
         skiprows: list[int] | None = [0]  # skip the '"sep=\t"' declaration
     else:
         line = first_bytes.decode("latin-1", errors="replace")
-        # Whichever delimiter appears more often on the header line wins.
         sep = "\t" if line.count("\t") > line.count(",") else ","
         skiprows = None
 
@@ -100,7 +98,6 @@ def load_source_csv(path: Path) -> "pd.DataFrame":
     if len(df) > 0 and _looks_like_units_row(df.iloc[0].values):
         df = df.iloc[1:].reset_index(drop=True)
 
-    # Coerce any object columns to numeric (bad values → NaN).
     for col in df.columns:
         if df[col].dtype == object:
             df[col] = pd.to_numeric(df[col], errors="coerce")
