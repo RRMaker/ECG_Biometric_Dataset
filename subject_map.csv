@@ -1,0 +1,84 @@
+global_subject_id,batches,original_ids,is_cross_session,first_appearance_batch,n_sessions,activities,notes
+S001,1,01,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S002,1,02,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S003,1,03,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S004,1,04,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S005,1,05,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S006,1,06,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S007,1,07,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S008,1,08,False,1,1,bending|running|sitting|skipping|stairs_combined|standing|walking,
+S009,2|4,Antonia,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S010,2|4,Daniel,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S011,2|4,Elisabeth,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S012,2,Freya,False,2,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S013,2,Gina,False,2,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S014,2,Horst,False,2,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S015,2|4,Johanna,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S016,2|4,Julia,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S017,2|4,Kay,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S018,2|4,Marie,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S019,2|4,Nhung,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S020,2|4,Paul,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S021,2,Paulus,False,2,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S022,2,Peggy,False,2,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S023,2|4,Sebastian,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,filename says 'stairs_down' but folder is 'skipping' — inspect IMU to confirm true activity
+S024,2|4,Sophie,True,2,2,running|sitting|skipping|stairs_down|stairs_up|standing|walking,filename says 'stairs_down' but folder is 'skipping' — inspect IMU to confirm true activity
+S025,4,S35,False,4,1,badminton|running|sitting|skipping|stairs_down|standing|walking,
+S026,4,S36,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S027,4,S37,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing,
+S028,4,S38,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S029,4,S39,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S030,4,S40,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S031,4,S41,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing,
+S032,4,S42,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S033,4,S43,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S034,4,S44,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S035,4,S45,False,4,1,badminton|running|sitting|stairs_down|stairs_up|standing|walking,
+S036,4,S46,False,4,1,badminton|running|sitting|stairs_down|stairs_up|walking,
+S037,4,S47,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|walking,
+S038,4,S48,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S039,4,S49,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S040,4,S50,False,4,1,badminton|running|sitting|standing|walking,
+S041,4,S51,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S042,4,S52,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S043,4,S53,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S044,4,S54,False,4,1,badminton|running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S045,5,chyntia,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S046,5,henri,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S047,5,igor,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S048,5,joseph,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S049,5,michelle,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S050,5,rachel,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S051,5,samuel,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S052,5,zebulun,False,5,1,running|sitting|skipping|stairs_down|stairs_up|standing,
+S053,6,s1,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S054,6,s2,False,6,1,running|stairs_down|stairs_up|standing,
+S055,6,s3,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S056,6,s4,False,6,1,running|skipping|stairs_down|stairs_up|standing,
+S057,6,s5,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S058,6,s6,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S059,6,s7,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S060,6,s8,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S061,6,s9,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S062,6,s10,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S063,6,s11,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S064,6,s12,False,6,1,skipping|stairs_down|stairs_up|standing|walking,
+S065,6,s13,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S066,6,s14,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S067,6,s15,False,6,1,running|sitting|skipping|stairs_down|stairs_up|standing|walking,
+S068,7,s00,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S069,7,s01,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S070,7,s02,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S071,7,s03,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S072,7,s04,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S073,7,s05,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S074,7,s06,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S075,7,s07,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S076,7,s08,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S077,7,s09,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S078,7,s10,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S079,7,s11,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S080,7,s12,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S081,7,s13,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S082,7,s14,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP
+S083,7,s15,False,7,1,multi_activity|running|sitting|skipping|stairs_down|stairs_up|standing,multi-activity folder: WalkingClimbDOWNSkipping ; multi-activity folder: WalkingClimbUPClimbDOWN ; multi-activity folder: WalkingRunning ; multi-activity folder: WalkingSkippingRunning ; multi-activity folder: WalkingStandingClimbUP

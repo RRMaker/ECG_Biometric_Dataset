@@ -1,0 +1,353 @@
+sample_id,global_subject_id,original_id,batch,activity,is_multi_activity,session,source_file,window_id,window_start_row,window_end_row,split,notes,reason
+718,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,1,2560,7680,train,,insufficient_peaks(1)
+719,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,2,5120,10240,train,,insufficient_peaks(3)
+728,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,11,28160,33280,train,,insufficient_peaks(4)
+730,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,13,33280,38400,train,,insufficient_beats_after_edge_trim(4)
+735,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,18,46080,51200,train,,insufficient_peaks(4)
+736,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,19,48640,53760,train,,insufficient_peaks(1)
+737,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,20,51200,56320,train,,insufficient_peaks(4)
+738,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,21,53760,58880,train,,insufficient_peaks(2)
+739,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,22,56320,61440,train,,insufficient_peaks(4)
+744,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,27,69120,74240,train,,insufficient_peaks(3)
+745,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,28,71680,76800,train,,insufficient_peaks(4)
+746,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,29,74240,79360,train,,insufficient_peaks(3)
+747,S001,01,1,skipping,False,1,batch1\skipping\01_springen_80E9_center.csv,30,76800,81920,train,,insufficient_peaks(3)
+2471,S017,Kay,2,skipping,False,1,batch2\skipping\skipping_Kay.csv,13,33280,38400,train,,insufficient_beats_after_edge_trim(4)
+2960,S022,Peggy,2,stairs_down,False,1,batch2\stairs_down\stairs_down_Peggy.csv,17,43520,48640,train,,insufficient_peaks(3)
+2961,S022,Peggy,2,stairs_down,False,1,batch2\stairs_down\stairs_down_Peggy.csv,18,46080,51200,train,,insufficient_peaks(3)
+2963,S022,Peggy,2,stairs_down,False,1,batch2\stairs_down\stairs_down_Peggy.csv,20,51200,56320,train,,insufficient_peaks(4)
+4647,S028,S38,4,running,False,1,batch4\running\S38_R.csv,2,5120,10240,val,,insufficient_peaks(4)
+4648,S028,S38,4,running,False,1,batch4\running\S38_R.csv,3,7680,12800,val,,insufficient_peaks(4)
+4649,S028,S38,4,running,False,1,batch4\running\S38_R.csv,4,10240,15360,val,,insufficient_peaks(3)
+4650,S028,S38,4,running,False,1,batch4\running\S38_R.csv,5,12800,17920,val,,insufficient_peaks(3)
+4651,S028,S38,4,running,False,1,batch4\running\S38_R.csv,6,15360,20480,val,,insufficient_peaks(2)
+4653,S028,S38,4,running,False,1,batch4\running\S38_R.csv,8,20480,25600,val,,insufficient_beats_after_edge_trim(4)
+4654,S028,S38,4,running,False,1,batch4\running\S38_R.csv,9,23040,28160,val,,insufficient_peaks(2)
+4657,S028,S38,4,running,False,1,batch4\running\S38_R.csv,12,30720,35840,val,,insufficient_peaks(3)
+5838,S017,Kay,4,skipping,False,2,batch4\skipping\skipping_Kay.csv,13,33280,38400,test,,insufficient_beats_after_edge_trim(4)
+9124,S066,s14,6,running,False,1,batch6\running\running_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+9125,S066,s14,6,running,False,1,batch6\running\running_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+9126,S066,s14,6,running,False,1,batch6\running\running_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+9127,S066,s14,6,running,False,1,batch6\running\running_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+9128,S066,s14,6,running,False,1,batch6\running\running_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+9129,S066,s14,6,running,False,1,batch6\running\running_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+9130,S066,s14,6,running,False,1,batch6\running\running_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+9131,S066,s14,6,running,False,1,batch6\running\running_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+9132,S066,s14,6,running,False,1,batch6\running\running_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+9133,S066,s14,6,running,False,1,batch6\running\running_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+9134,S066,s14,6,running,False,1,batch6\running\running_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+9135,S066,s14,6,running,False,1,batch6\running\running_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+9136,S066,s14,6,running,False,1,batch6\running\running_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+9137,S066,s14,6,running,False,1,batch6\running\running_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+9138,S066,s14,6,running,False,1,batch6\running\running_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+9139,S066,s14,6,running,False,1,batch6\running\running_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+9140,S066,s14,6,running,False,1,batch6\running\running_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+9141,S066,s14,6,running,False,1,batch6\running\running_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+9142,S066,s14,6,running,False,1,batch6\running\running_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+9143,S066,s14,6,running,False,1,batch6\running\running_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+9144,S066,s14,6,running,False,1,batch6\running\running_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+9145,S066,s14,6,running,False,1,batch6\running\running_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+9146,S066,s14,6,running,False,1,batch6\running\running_s14.csv,22,56320,61440,train,,missing_primary_ecg_column
+9147,S066,s14,6,running,False,1,batch6\running\running_s14.csv,23,58880,64000,train,,missing_primary_ecg_column
+9148,S067,s15,6,running,False,1,batch6\running\running_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+9149,S067,s15,6,running,False,1,batch6\running\running_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+9150,S067,s15,6,running,False,1,batch6\running\running_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+9151,S067,s15,6,running,False,1,batch6\running\running_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+9152,S067,s15,6,running,False,1,batch6\running\running_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+9153,S067,s15,6,running,False,1,batch6\running\running_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+9154,S067,s15,6,running,False,1,batch6\running\running_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+9155,S067,s15,6,running,False,1,batch6\running\running_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+9156,S067,s15,6,running,False,1,batch6\running\running_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+9157,S067,s15,6,running,False,1,batch6\running\running_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+9158,S067,s15,6,running,False,1,batch6\running\running_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+9159,S067,s15,6,running,False,1,batch6\running\running_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+9160,S067,s15,6,running,False,1,batch6\running\running_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+9161,S067,s15,6,running,False,1,batch6\running\running_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+9162,S067,s15,6,running,False,1,batch6\running\running_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+9163,S067,s15,6,running,False,1,batch6\running\running_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+9164,S067,s15,6,running,False,1,batch6\running\running_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+9165,S067,s15,6,running,False,1,batch6\running\running_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+9166,S067,s15,6,running,False,1,batch6\running\running_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+9167,S067,s15,6,running,False,1,batch6\running\running_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+9168,S067,s15,6,running,False,1,batch6\running\running_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+9169,S067,s15,6,running,False,1,batch6\running\running_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+9170,S067,s15,6,running,False,1,batch6\running\running_s15.csv,22,56320,61440,train,,missing_primary_ecg_column
+9418,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+9419,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+9420,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+9421,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+9422,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+9423,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+9424,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+9425,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+9426,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+9427,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+9428,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+9429,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+9430,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+9431,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+9432,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+9433,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+9434,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+9435,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+9436,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+9437,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+9438,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+9439,S066,s14,6,sitting,False,1,batch6\sitting\sitting_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+9440,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+9441,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+9442,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+9443,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+9444,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+9445,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+9446,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+9447,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+9448,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+9449,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+9450,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+9451,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+9452,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+9453,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+9454,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+9455,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+9456,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+9457,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+9458,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+9459,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+9460,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+9461,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+9462,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,22,56320,61440,train,,missing_primary_ecg_column
+9463,S067,s15,6,sitting,False,1,batch6\sitting\sitting_s15.csv,23,58880,64000,train,,missing_primary_ecg_column
+9688,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+9689,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+9690,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+9691,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+9692,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+9693,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+9694,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+9695,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+9696,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+9697,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+9698,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+9699,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+9700,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+9701,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+9702,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+9703,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+9704,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+9705,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+9706,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+9707,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+9708,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+9709,S066,s14,6,skipping,False,1,batch6\skipping\skipping_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+9710,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+9711,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+9712,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+9713,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+9714,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+9715,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+9716,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+9717,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+9718,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+9719,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+9720,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+9721,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+9722,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+9723,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+9724,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+9725,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+9726,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+9727,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+9728,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+9729,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+9730,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+9731,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+9732,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,22,56320,61440,train,,missing_primary_ecg_column
+9733,S067,s15,6,skipping,False,1,batch6\skipping\skipping_s15.csv,23,58880,64000,train,,missing_primary_ecg_column
+9983,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+9984,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+9985,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+9986,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+9987,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+9988,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+9989,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+9990,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+9991,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+9992,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+9993,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+9994,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+9995,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+9996,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+9997,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+9998,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+9999,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+10000,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+10001,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+10002,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+10003,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+10004,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+10005,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,22,56320,61440,train,,missing_primary_ecg_column
+10006,S066,s14,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s14.csv,23,58880,64000,train,,missing_primary_ecg_column
+10007,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+10008,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+10009,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+10010,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+10011,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+10012,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+10013,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+10014,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+10015,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+10016,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+10017,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+10018,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+10019,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+10020,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+10021,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+10022,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+10023,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+10024,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+10025,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+10026,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+10027,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+10028,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+10029,S067,s15,6,stairs_down,False,1,batch6\stairs down\climbing_down_stairs_s15.csv,22,56320,61440,train,,missing_primary_ecg_column
+10298,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+10299,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+10300,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+10301,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+10302,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+10303,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+10304,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+10305,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+10306,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+10307,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+10308,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+10309,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+10310,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+10311,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+10312,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+10313,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+10314,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+10315,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+10316,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+10317,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+10318,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+10319,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+10320,S066,s14,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s14.csv,22,56320,61440,train,,missing_primary_ecg_column
+10321,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+10322,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+10323,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+10324,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+10325,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+10326,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+10327,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+10328,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+10329,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+10330,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+10331,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+10332,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+10333,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+10334,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+10335,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+10336,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+10337,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+10338,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+10339,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+10340,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+10341,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+10342,S067,s15,6,stairs_up,False,1,batch6\stairs up\climbing_up_stairs_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+10610,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+10611,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+10612,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+10613,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+10614,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+10615,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+10616,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+10617,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+10618,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+10619,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+10620,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+10621,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+10622,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+10623,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+10624,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+10625,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+10626,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+10627,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+10628,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+10629,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+10630,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+10631,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+10632,S066,s14,6,standing,False,1,batch6\standing\standing_s14.csv,22,56320,61440,train,,missing_primary_ecg_column
+10633,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+10634,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+10635,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+10636,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+10637,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+10638,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+10639,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+10640,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+10641,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+10642,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+10643,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+10644,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+10645,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+10646,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+10647,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+10648,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+10649,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+10650,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+10651,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+10652,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+10653,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+10654,S067,s15,6,standing,False,1,batch6\standing\standing_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+10925,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,0,0,5120,train,,missing_primary_ecg_column
+10926,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,1,2560,7680,train,,missing_primary_ecg_column
+10927,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,2,5120,10240,train,,missing_primary_ecg_column
+10928,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,3,7680,12800,train,,missing_primary_ecg_column
+10929,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,4,10240,15360,train,,missing_primary_ecg_column
+10930,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,5,12800,17920,train,,missing_primary_ecg_column
+10931,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,6,15360,20480,train,,missing_primary_ecg_column
+10932,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,7,17920,23040,train,,missing_primary_ecg_column
+10933,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,8,20480,25600,train,,missing_primary_ecg_column
+10934,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,9,23040,28160,train,,missing_primary_ecg_column
+10935,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,10,25600,30720,train,,missing_primary_ecg_column
+10936,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,11,28160,33280,train,,missing_primary_ecg_column
+10937,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,12,30720,35840,train,,missing_primary_ecg_column
+10938,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,13,33280,38400,train,,missing_primary_ecg_column
+10939,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,14,35840,40960,train,,missing_primary_ecg_column
+10940,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,15,38400,43520,train,,missing_primary_ecg_column
+10941,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,16,40960,46080,train,,missing_primary_ecg_column
+10942,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,17,43520,48640,train,,missing_primary_ecg_column
+10943,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,18,46080,51200,train,,missing_primary_ecg_column
+10944,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,19,48640,53760,train,,missing_primary_ecg_column
+10945,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,20,51200,56320,train,,missing_primary_ecg_column
+10946,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,21,53760,58880,train,,missing_primary_ecg_column
+10947,S066,s14,6,walking,False,1,batch6\walking\walking_s14.csv,22,56320,61440,train,,missing_primary_ecg_column
+10948,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,0,0,5120,train,,missing_primary_ecg_column
+10949,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,1,2560,7680,train,,missing_primary_ecg_column
+10950,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,2,5120,10240,train,,missing_primary_ecg_column
+10951,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,3,7680,12800,train,,missing_primary_ecg_column
+10952,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,4,10240,15360,train,,missing_primary_ecg_column
+10953,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,5,12800,17920,train,,missing_primary_ecg_column
+10954,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,6,15360,20480,train,,missing_primary_ecg_column
+10955,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,7,17920,23040,train,,missing_primary_ecg_column
+10956,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,8,20480,25600,train,,missing_primary_ecg_column
+10957,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,9,23040,28160,train,,missing_primary_ecg_column
+10958,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,10,25600,30720,train,,missing_primary_ecg_column
+10959,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,11,28160,33280,train,,missing_primary_ecg_column
+10960,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,12,30720,35840,train,,missing_primary_ecg_column
+10961,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,13,33280,38400,train,,missing_primary_ecg_column
+10962,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,14,35840,40960,train,,missing_primary_ecg_column
+10963,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,15,38400,43520,train,,missing_primary_ecg_column
+10964,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,16,40960,46080,train,,missing_primary_ecg_column
+10965,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,17,43520,48640,train,,missing_primary_ecg_column
+10966,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,18,46080,51200,train,,missing_primary_ecg_column
+10967,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,19,48640,53760,train,,missing_primary_ecg_column
+10968,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,20,51200,56320,train,,missing_primary_ecg_column
+10969,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,21,53760,58880,train,,missing_primary_ecg_column
+10970,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,22,56320,61440,train,,missing_primary_ecg_column
+10971,S067,s15,6,walking,False,1,batch6\walking\walking_s15.csv,23,58880,64000,train,,missing_primary_ecg_column
+11472,S068,s00,7,sitting,False,1,batch7\Sitting\s00.csv,11,28160,33280,test,,row_range_beyond_file(33279)
+11493,S070,s02,7,sitting,False,1,batch7\Sitting\s02.csv,10,25600,30720,test,,row_range_beyond_file(30719)
+11506,S071,s03,7,sitting,False,1,batch7\Sitting\s03.csv,12,30720,35840,test,,row_range_beyond_file(35839)

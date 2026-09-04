@@ -1,0 +1,14 @@
+Data root: C:\Users\rohan\human-activity-Recognition
+Found batches: [1, 2, 4, 5, 6, 7]
+  batch1: 56 recordings parsed
+  batch2: 112 recordings parsed
+  batch4: 160 recordings parsed
+  batch5: 55 recordings parsed
+  batch6: 98 recordings parsed
+  batch7: 176 recordings parsed
+Total parsed: 657   skipped: 1
+  SKIP batch5\walking\walking_s10.csv: unparsable filename
+Wrote 14237 windows to index.csv
+  by split: {'train': 7299, 'val': 3430, 'test': 3508}
+  by batch: {1: 1567, 2: 2540, 4: 3798, 5: 1135, 6: 2057, 7: 3140}
+Wrote 83 subjects to subject_map.csv
