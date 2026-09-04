@@ -84,7 +84,6 @@ MULTI_ACTIVITY_FOLDERS = {
 
 
 def normalize_activity(raw: str) -> "Optional[str]":
-    """Map a raw folder or filename token to the canonical activity label."""
     key = raw.strip()
     if key in ACTIVITY_MAP:
         return ACTIVITY_MAP[key]
@@ -101,7 +100,7 @@ class Recording:
     activity: str
     is_multi_activity: bool
     session: int
-    source_file: str    # path relative to --data-root
+    source_file: str   
     split: str
     notes: str = ""
 
@@ -113,9 +112,6 @@ _BATCH7_RE = re.compile(r"^(s\d{2})$")
 
 def _match_name_suffix(stem: str, names: Iterable[str], sep: str
                        ) -> "Optional[tuple[str, str]]":
-    """If stem ends with `{sep}{name}` for some name in names (case-insensitive),
-    return (prefix, matched_name_lower). Longest match wins so 'Paulus' beats
-    'Paul' on 'sitting_Paulus'."""
     stem_lower = stem.lower()
     best: Optional[tuple[str, str]] = None
     for name in names:
@@ -128,7 +124,6 @@ def _match_name_suffix(stem: str, names: Iterable[str], sep: str
 
 
 def parse_batch1(path: Path, activity_folder: str) -> "Optional[Recording]":
-    """batch1: {NN}_{german_activity}_{sensor}_center.csv"""
     m = _BATCH1_RE.match(path.stem)
     if not m:
         return None
@@ -149,7 +144,6 @@ def parse_batch1(path: Path, activity_folder: str) -> "Optional[Recording]":
 
 
 def parse_batch2(path: Path, activity_folder: str) -> "Optional[Recording]":
-    """batch2: {activity}_{FirstName}.csv (activity may contain underscores)."""
     match = _match_name_suffix(path.stem, BATCH2_NAMES, sep="_")
     if match is None:
         return None
@@ -170,7 +164,6 @@ def parse_batch2(path: Path, activity_folder: str) -> "Optional[Recording]":
 
 
 def parse_batch4(path: Path, activity_folder: str) -> "Optional[Recording]":
-    # Batch 4 had 2 filename formats, handling both
     stem = path.stem
     # Format (a): S-code with activity abbreviation
     m = _BATCH4_SCODE_RE.match(stem)
@@ -219,7 +212,6 @@ def parse_batch4(path: Path, activity_folder: str) -> "Optional[Recording]":
 
 
 def parse_batch5(path: Path, activity_folder: str) -> "Optional[Recording]":
-    """batch5: {activity}-{firstname}.csv (hyphen separator, not underscore)."""
     match = _match_name_suffix(path.stem, BATCH5_NAMES, sep="-")
     if match is None:
         return None
@@ -240,7 +232,6 @@ def parse_batch5(path: Path, activity_folder: str) -> "Optional[Recording]":
 
 
 def parse_batch6(path: Path, activity_folder: str) -> "Optional[Recording]":
-    """batch6: {activity}_{sN}.csv, where activity may contain a space."""
     m = _BATCH6_RE.match(path.stem)
     if not m:
         return None
@@ -264,7 +255,6 @@ def parse_batch6(path: Path, activity_folder: str) -> "Optional[Recording]":
 
 
 def parse_batch7(path: Path, activity_folder: str) -> "Optional[Recording]":
-    # batch7: {sNN}.csv, folder name = activity (may be multi-activity)
     m = _BATCH7_RE.match(path.stem)
     if not m:
         return None
