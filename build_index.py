@@ -1,28 +1,3 @@
-#!/usr/bin/env python3
-"""build_index.py — ECG biometric dataset ingestion.
-
-Walks a cloned human-activity-Recognition repository, parses filenames per
-batch, assigns unified global subject IDs (S001–S083), standardizes activity
-labels, computes 10-second / 50%-overlap window ranges, assigns train/val/test
-split, and writes:
-
-    <out-dir>/index.csv         one row per window
-    <out-dir>/subject_map.csv   one row per global subject
-    <out-dir>/ingestion_log.txt human-readable log of skips and anomalies
-
-No signal data is copied into the index — each window row stores
-(source_file, window_start_row, window_end_row) so the training pipeline
-loads samples on-the-fly and the index stays a few MB.
-
-Usage:
-    python build_index.py --data-root /path/to/human-activity-Recognition \\
-                          --out-dir   /path/to/ecg_biometric_dataset
-
-Assumes each source CSV has exactly one header row. Adjust HEADER_ROWS if not.
-"""
-
-from __future__ import annotations
-
 import argparse
 import csv
 import re
@@ -32,25 +7,12 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Optional
 
-
-# ---------------------------------------------------------------------------
-# Windowing constants (Section 6 of the handoff)
-# ---------------------------------------------------------------------------
-
 SAMPLE_RATE = 512                        # Hz
 WINDOW_SECONDS = 10
 WINDOW_SIZE = SAMPLE_RATE * WINDOW_SECONDS   # 5120 samples
 STEP_SIZE = WINDOW_SIZE // 2                 # 2560 samples (50% overlap)
 HEADER_ROWS = 1                              # Shimmer CSVs: single header row
 
-
-# ---------------------------------------------------------------------------
-# Subject-ID maps (Section 4 of the handoff)
-# ---------------------------------------------------------------------------
-
-# Batch 2 first names, in the handoff's canonical order → S009–S024.
-# These same names are reused in batch 4 for cross-session recordings — they
-# keep their batch-2 global ID (that's the whole point of them).
 BATCH2_NAMES = [
     "Antonia", "Daniel", "Elisabeth", "Freya", "Gina", "Horst",
     "Johanna", "Julia", "Kay", "Marie", "Nhung", "Paul",
@@ -60,19 +22,15 @@ NAME_TO_GLOBAL: dict[str, str] = {
     name.lower(): f"S{i + 9:03d}" for i, name in enumerate(BATCH2_NAMES)
 }
 
-# Subjects confirmed by the handoff to appear in both batch 2 and batch 4.
-# (Used for a sanity flag, not for logic — cross-session is derived from data.)
 CROSS_SESSION_NAMES = {
     "antonia", "daniel", "elisabeth", "johanna", "julia", "kay",
     "marie", "nhung", "paul", "sebastian", "sophie",
 }
 
-# Batch 4 new subjects: original S35–S54 → S025–S044.
 BATCH4_SCODE_TO_GLOBAL: dict[str, str] = {
     f"S{35 + i}": f"S{25 + i:03d}" for i in range(20)
 }
 
-# Batch 5 first names → S045–S052. Handoff lists them in this order.
 BATCH5_NAMES = [
     "chyntia", "henri", "igor", "joseph",
     "michelle", "rachel", "samuel", "zebulun",
@@ -81,20 +39,13 @@ BATCH5_NAME_TO_GLOBAL: dict[str, str] = {
     name: f"S{i + 45:03d}" for i, name in enumerate(BATCH5_NAMES)
 }
 
-# Batch 6 anonymized codes s1–s15 → S053–S067.
 BATCH6_S_TO_GLOBAL: dict[str, str] = {
     f"s{i}": f"S{52 + i:03d}" for i in range(1, 16)
 }
 
-# Batch 7 anonymized codes s00–s15 → S068–S083.
 BATCH7_S_TO_GLOBAL: dict[str, str] = {
     f"s{i:02d}": f"S{68 + i:03d}" for i in range(16)
 }
-
-
-# ---------------------------------------------------------------------------
-# Activity label standardization (Section 6 of the handoff)
-# ---------------------------------------------------------------------------
 
 ACTIVITY_MAP: dict[str, str] = {
     # English (case sensitivity handled below with .lower() fallback)
@@ -109,7 +60,7 @@ ACTIVITY_MAP: dict[str, str] = {
     "stairs up": "stairs_up",
     "stairs_down": "stairs_down",
     "stairs down": "stairs_down",
-    "stairs": "stairs_combined",     # batch 1 only — up + down mixed
+    "stairs": "stairs_combined",    
     # German (batch 1 filenames)
     "sitzen": "sitting",
     "laufen": "running",
@@ -123,7 +74,6 @@ ACTIVITY_MAP: dict[str, str] = {
     "CSU": "stairs_up", "CSD": "stairs_down", "SK": "skipping", "BAD": "badminton",
 }
 
-# Batch 7 folders that contain a continuous recording of several activities.
 MULTI_ACTIVITY_FOLDERS = {
     "WalkingRunning",
     "WalkingSkippingRunning",
@@ -133,7 +83,7 @@ MULTI_ACTIVITY_FOLDERS = {
 }
 
 
-def normalize_activity(raw: str) -> Optional[str]:
+def normalize_activity(raw: str) -> "Optional[str]":
     """Map a raw folder or filename token to the canonical activity label."""
     key = raw.strip()
     if key in ACTIVITY_MAP:
@@ -142,10 +92,6 @@ def normalize_activity(raw: str) -> Optional[str]:
         return ACTIVITY_MAP[key.lower()]
     return None
 
-
-# ---------------------------------------------------------------------------
-# Recording record — one source CSV, before windowing
-# ---------------------------------------------------------------------------
 
 @dataclass
 class Recording:
@@ -159,11 +105,6 @@ class Recording:
     split: str
     notes: str = ""
 
-
-# ---------------------------------------------------------------------------
-# Per-batch filename parsers
-# ---------------------------------------------------------------------------
-
 _BATCH1_RE = re.compile(r"^(\d{2})_([A-Za-zÄÖÜäöüß]+)_[0-9A-Za-z]+_center$")
 _BATCH4_SCODE_RE = re.compile(r"^(S\d{2})_([A-Z]+)$")
 _BATCH6_RE = re.compile(r"^([A-Za-z_ ]+?)_(s\d+)$")
@@ -171,7 +112,7 @@ _BATCH7_RE = re.compile(r"^(s\d{2})$")
 
 
 def _match_name_suffix(stem: str, names: Iterable[str], sep: str
-                       ) -> Optional[tuple[str, str]]:
+                       ) -> "Optional[tuple[str, str]]":
     """If stem ends with `{sep}{name}` for some name in names (case-insensitive),
     return (prefix, matched_name_lower). Longest match wins so 'Paulus' beats
     'Paul' on 'sitting_Paulus'."""
@@ -186,7 +127,7 @@ def _match_name_suffix(stem: str, names: Iterable[str], sep: str
     return best
 
 
-def parse_batch1(path: Path, activity_folder: str) -> Optional[Recording]:
+def parse_batch1(path: Path, activity_folder: str) -> "Optional[Recording]":
     """batch1: {NN}_{german_activity}_{sensor}_center.csv"""
     m = _BATCH1_RE.match(path.stem)
     if not m:
@@ -207,7 +148,7 @@ def parse_batch1(path: Path, activity_folder: str) -> Optional[Recording]:
     )
 
 
-def parse_batch2(path: Path, activity_folder: str) -> Optional[Recording]:
+def parse_batch2(path: Path, activity_folder: str) -> "Optional[Recording]":
     """batch2: {activity}_{FirstName}.csv (activity may contain underscores)."""
     match = _match_name_suffix(path.stem, BATCH2_NAMES, sep="_")
     if match is None:
@@ -228,11 +169,8 @@ def parse_batch2(path: Path, activity_folder: str) -> Optional[Recording]:
     )
 
 
-def parse_batch4(path: Path, activity_folder: str) -> Optional[Recording]:
-    """batch4 has two filename formats:
-       (a) S{NN}_{code}.csv           — new subjects,        session 1
-       (b) {activity}_{FirstName}.csv — cross-session redo,  session 2
-    """
+def parse_batch4(path: Path, activity_folder: str) -> "Optional[Recording]":
+    # Batch 4 had 2 filename formats, handling both
     stem = path.stem
     # Format (a): S-code with activity abbreviation
     m = _BATCH4_SCODE_RE.match(stem)
@@ -254,7 +192,6 @@ def parse_batch4(path: Path, activity_folder: str) -> Optional[Recording]:
             source_file="",
             split="val",
         )
-    # Format (b): first-name cross-session file
     match = _match_name_suffix(stem, BATCH2_NAMES, sep="_")
     if match is None:
         return None
@@ -281,7 +218,7 @@ def parse_batch4(path: Path, activity_folder: str) -> Optional[Recording]:
     )
 
 
-def parse_batch5(path: Path, activity_folder: str) -> Optional[Recording]:
+def parse_batch5(path: Path, activity_folder: str) -> "Optional[Recording]":
     """batch5: {activity}-{firstname}.csv (hyphen separator, not underscore)."""
     match = _match_name_suffix(path.stem, BATCH5_NAMES, sep="-")
     if match is None:
@@ -302,7 +239,7 @@ def parse_batch5(path: Path, activity_folder: str) -> Optional[Recording]:
     )
 
 
-def parse_batch6(path: Path, activity_folder: str) -> Optional[Recording]:
+def parse_batch6(path: Path, activity_folder: str) -> "Optional[Recording]":
     """batch6: {activity}_{sN}.csv, where activity may contain a space."""
     m = _BATCH6_RE.match(path.stem)
     if not m:
@@ -326,8 +263,8 @@ def parse_batch6(path: Path, activity_folder: str) -> Optional[Recording]:
     )
 
 
-def parse_batch7(path: Path, activity_folder: str) -> Optional[Recording]:
-    """batch7: {sNN}.csv, folder name = activity (may be multi-activity)."""
+def parse_batch7(path: Path, activity_folder: str) -> "Optional[Recording]":
+    # batch7: {sNN}.csv, folder name = activity (may be multi-activity)
     m = _BATCH7_RE.match(path.stem)
     if not m:
         return None
@@ -368,13 +305,7 @@ BATCH_PARSERS = {
 }
 
 
-# ---------------------------------------------------------------------------
-# Filesystem walking
-# ---------------------------------------------------------------------------
-
-def find_batch_dirs(data_root: Path) -> dict[int, Path]:
-    """Return {batch_number: path} for every batch{N} folder present. Batch 3
-    is expected to be absent (handoff Section 2)."""
+def find_batch_dirs(data_root: Path) -> "dict[int, Path]":
     found: dict[int, Path] = {}
     for n in (1, 2, 4, 5, 6, 7):
         p = data_root / f"batch{n}"
@@ -383,33 +314,25 @@ def find_batch_dirs(data_root: Path) -> dict[int, Path]:
     return found
 
 
-def iter_activity_dirs(batch_dir: Path) -> Iterable[Path]:
+def iter_activity_dirs(batch_dir: Path) -> "Iterable[Path]":
     for entry in sorted(batch_dir.iterdir()):
         if entry.is_dir():
             yield entry
 
 
-def iter_csvs(activity_dir: Path) -> Iterable[Path]:
+def iter_csvs(activity_dir: Path) -> "Iterable[Path]":
     for entry in sorted(activity_dir.iterdir()):
         if entry.is_file() and entry.suffix.lower() == ".csv":
             yield entry
 
 
-# ---------------------------------------------------------------------------
-# Row counting & window computation
-# ---------------------------------------------------------------------------
-
-def count_data_rows(csv_path: Path) -> int:
-    """Fast raw line count minus header row(s). Uses buffered binary read so
-    it's ~10x quicker than pandas for the ~60k-row Shimmer CSVs."""
+def count_data_rows(csv_path: Path) -> "int":
     with open(csv_path, "rb") as f:
         total = sum(1 for _ in f)
     return max(total - HEADER_ROWS, 0)
 
 
-def compute_windows(n_rows: int) -> list[tuple[int, int]]:
-    """Return [(start, end), ...] for non-truncated 10 s / 50%-overlap windows.
-    Rows are indexed relative to the *data* portion (header excluded)."""
+def compute_windows(n_rows: int) -> "list[tuple[int, int]]":
     if n_rows < WINDOW_SIZE:
         return []
     out = []
@@ -419,10 +342,6 @@ def compute_windows(n_rows: int) -> list[tuple[int, int]]:
         start += STEP_SIZE
     return out
 
-
-# ---------------------------------------------------------------------------
-# Main build routine
-# ---------------------------------------------------------------------------
 
 def build(data_root: Path, out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -442,7 +361,6 @@ def build(data_root: Path, out_dir: Path) -> None:
     log(f"Data root: {data_root}")
     log(f"Found batches: {sorted(batch_dirs)}")
 
-    # ---- Parse every CSV filename ----
     recordings: list[Recording] = []
     skipped: list[tuple[Path, str]] = []
 
@@ -463,7 +381,6 @@ def build(data_root: Path, out_dir: Path) -> None:
     for p, reason in skipped:
         log(f"  SKIP {p.relative_to(data_root)}: {reason}")
 
-    # ---- Write index.csv (one row per window) ----
     windows_by_split: Counter[str] = Counter()
     windows_by_batch: Counter[int] = Counter()
     short_files: list[str] = []
@@ -500,7 +417,6 @@ def build(data_root: Path, out_dir: Path) -> None:
         for s in short_files:
             log(f"    SHORT {s}")
 
-    # ---- Aggregate subject_map.csv ----
     per_subject: dict[str, dict] = defaultdict(
         lambda: {"batches": set(), "original_ids": set(),
                  "sessions": set(), "activities": set(), "notes": []}
@@ -539,7 +455,6 @@ def build(data_root: Path, out_dir: Path) -> None:
             ])
     log(f"Wrote {len(per_subject)} subjects to {subject_map_path.name}")
 
-    # Sanity: any expected cross-session subject NOT flagged?
     for name in CROSS_SESSION_NAMES:
         gid = NAME_TO_GLOBAL[name]
         if gid in per_subject and len(per_subject[gid]["batches"]) < 2:
